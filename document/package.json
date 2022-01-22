@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "dev": "webpack-dev-server",
+        "build": "webpack",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "devDependencies": {
@@ -33,6 +34,9 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "boostact": "^1.3.6"
+        "boostact": "^1.3.7",
+        "highlight.js": "^10.4.1",
+        "jss": "^10.5.0",
+        "jss-preset-default": "^10.5.0"
     }
 }

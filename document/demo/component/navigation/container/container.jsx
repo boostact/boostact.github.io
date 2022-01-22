@@ -1,6 +1,5 @@
 import { Boostact } from "boostact";
 
-import "@fortawesome/fontawesome-free/js/all";
 import List from "./list";
 import classes from "./style";
 
