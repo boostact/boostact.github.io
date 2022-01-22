@@ -5,7 +5,7 @@ hljs.registerLanguage("javascript", javascript);
 import classes from "../style";
 /** @jsx Boostact.createElement */
 
-const string1 = marked(`
+const string1 = marked.parse(`
 # 서문
 ​
 **부스트액트**는 **순수 자바스크립트**를 사용하여 만든 웹 프레임워크입니다. 리액트 공식 문서를 포함하여, 많은 곳에 리액트를 다루는 법에 관한 서술이 있습니다. 하지만 간단한 예제와 설명을 가지고는 리액트 내부 동작을 이해하기 어렵습니다. 우리는 이러한 것을 해결하기 위해 **리액트를 처음부터 다시 만들어보는 경험**을 시도했습니다.    
@@ -32,7 +32,7 @@ npm install @babel/cli @babel/core @babel/polyfill @babel/preset-env @babel/pres
 `
 ).value;
 
-const string2 = marked(`
+const string2 = marked.parse(`
 
 웹팩과 바벨을 설치한 후에는 아래와 같은 setting file들이 필요합니다. 다만 아래는 예시일 뿐이니, 필요에 따라 다른 설정을 추가하셔도 좋습니다.
 ​​
@@ -47,7 +47,7 @@ const highlight2 = hljs.highlight(
 `
 ).value;
 
-const string3 = marked(`
+const string3 = marked.parse(`
 ### webpack.config.js
 `);
 
@@ -99,7 +99,7 @@ module.exports = {
     `
 ).value;
 
-const string4 = marked(`설정이 모두 끝났다면, 이제 package.json에서 webpack 실행 명령어를 만들어주시면 됩니다. 다음으로는 boostact의 동작을 확인할 수 있는 예제 코드들입니다.
+const string4 = marked.parse(`설정이 모두 끝났다면, 이제 package.json에서 webpack 실행 명령어를 만들어주시면 됩니다. 다음으로는 boostact의 동작을 확인할 수 있는 예제 코드들입니다.
 
 ### index.html
 `);
@@ -115,7 +115,7 @@ const highlight4 = hljs.highlight(
 `
 ).value;
 
-const string5 = marked(`### index.js`);
+const string5 = marked.parse(`### index.js`);
 
 const highlight5 = hljs.highlight(
     "javascript",
@@ -128,7 +128,7 @@ Boostact.render(<App />, root);
 `
 ).value;
 
-const string6 = marked(`### App.js`);
+const string6 = marked.parse(`### App.js`);
 
 const highlight6 = hljs.highlight(
     "javascript",
@@ -147,7 +147,7 @@ export default App;
 `
 ).value;
 
-const string7 = marked(`
+const string7 = marked.parse(`
 여기까지로 모든 설명이 끝났습니다. 주의할 점은, index.js와 App.js file과 같이 jsx 문법을 사용하는 파일들에 다음과 같은 주석을 추가해야 한다는 점입니다.
 이는 babel이 jsx를 React.createElement가 아닌 Boostact.createElement로 처리하게 해줍니다.   
 ​  

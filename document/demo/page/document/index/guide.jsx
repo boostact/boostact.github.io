@@ -5,7 +5,7 @@ hljs.registerLanguage("javascript", javascript);
 import classes from "../style";
 /** @jsx Boostact.createElement */
 
-const string1 = marked(`
+const string1 = marked.parse(`
 # Hook 사용하기
 
 이 장에서는 Boostact에서 사용할 수 있는 여러 Hook 기능들의 사용법에 대해 설명드리겠습니다.
@@ -63,7 +63,7 @@ export default Timer;
 `
 ).value;
 
-const string2 = marked(`
+const string2 = marked.parse(`
 이 중에서 useState와 setState, useEffect가 쓰인 지점에 집중해서 보도록 하겠습니다.
 ## useState
 `);
@@ -79,7 +79,7 @@ const [seconds, setSeconds] = Boostact.useState(numPad(startTime.getSeconds()));
 `
 ).value;
 
-const string3_1 = marked(`
+const string3_1 = marked.parse(`
 useState는 현재의 state 값과 이 값을 업데이트 해주는 함수와 함께 쌍을 이룹니다.
 state는 기본값으로 useState를 선언할 때 함께 넣어줍니다. 
 이러한 state는 setState를 이용하여 업데이트 해줄 수 있습니다.
@@ -110,7 +110,7 @@ const highlight2_2 = hljs.highlight(
   `
 ).value;
 
-const string3_2 = marked(`
+const string3_2 = marked.parse(`
 useEffect를 이용하면 컴포넌트가 생성되거나 삭제될 때 실행되는 함수를 정의할 수 있습니다.
 특정 값이 업데이트 될 때 호출하고 싶다면, 두번째 인자에 배열 형태로 값들을 넣어주면 됩니다.
 예제에서는 seconds, minutes, hours의 상태가 변할 때 호출하기 위해 배열로 넣어주었습니다.
@@ -143,7 +143,7 @@ export default ControllButton;
 `
 ).value;
 
-const string4 = marked(`
+const string4 = marked.parse(`
 useContext는 항상 context를 받는 것으로 시작됩니다. context는 Boostact의 createContext 함수로 만들어진 값을 의미합니다. 이 때 createContext 함수로 만든 값에는 재정의 전까지는 default 값이 들어가있습니다.
 useContext의 파라미터에 이 context를 넣어주면 useContext는 그 context에 저장되어 있던 값을 반환해줍니다.
 위 코드에서는 ./example이라는 경로에서 Context를 만들었고, 이것을 아래 Boostact.useContext(Context) 코드를 통해 사용하고 있음을 알 수 있습니다.
@@ -184,7 +184,7 @@ const reducerExample = () => {
 `
 ).value;
 
-const string5 = marked(`
+const string5 = marked.parse(`
 useReducer는 useState와 달리 하나의 상태에 대해서 다양한 상황에 대응할 수 있습니다.
 useReducer는 인자로 reducer와 초기값을 받고, dispatch와 짝을 이루어 현재 상태인 state를 반환하게 됩니다.
 
@@ -226,7 +226,7 @@ export default User;
 `
 ).value;
 
-const string6 = marked(`
+const string6 = marked.parse(`
 useMemo는 두 개의 파라미터를 받습니다. 첫번째에는 연산할 함수를, 두번째에는 관찰할 값을 배열 형태로 넣어줍니다. useMemo는 관찰한 값이 변경된 경우에는 이 함수를 실행시키고, 값이 변경되지 않았다면 이전에 저장된 값을 재사용합니다.
   
 ## useCallback
@@ -264,7 +264,7 @@ export default User;
 `
 ).value;
 
-const string7 = marked(`
+const string7 = marked.parse(`
 useCallback은 useMemo와 매우 유사합니다. 다른 점이 있다면, 첫번째 파라미터의 함수가 반환하는 것이 상태가 아닌 함수 형태인 점에서 차이가 있습니다. 위 코드는 앞선 useMemo와 매우 유사해보이지만, console.log와 jsx에서 다른 점이 보입니다.  
 따라서 nicknameLength가 console.log와 jsx 포맷 안에서 함수 형태로 사용되고 있는 것을 확인할 수 있습니다.
 `);

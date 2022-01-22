@@ -5,7 +5,7 @@ hljs.registerLanguage("javascript", javascript);
 import classes from "../style";
 /** @jsx Boostact.createElement */
 
-const string1 = marked(`
+const string1 = marked.parse(`
 # useReducer
 
 useReducer는 useState를 보다 더 많은 상황에서 사용할 수 있도록 분기 처리를 추가해준 것입니다.
@@ -31,7 +31,7 @@ const useReducer = (reducer, initialState) => {
 `
 ).value;
 
-const string2 = marked(`
+const string2 = marked.parse(`
 useReducer는 분기처리를 대신할 reducer 함수와, initalState라는 초기값을 매개변수로 받습니다.  
 HOOKS 역시 useState와 동일하게 기존 값이나 초기 값 둘 중 하나를 넣게 됩니다.  
 달라지는 부분은 dispatch를 생성하는 부분인데, 이 dispatch는 조건이나 타입 등을 가진 action을 받아 reducer를 실행시킵니다.

@@ -5,7 +5,7 @@ hljs.registerLanguage("javascript", javascript);
 import classes from "../style";
 /** @jsx Boostact.createElement */
 
-const string1 = marked(`
+const string1 = marked.parse(`
 # useCallback
 
 useCallback의 내부 구조는 useMemo와 같습니다. 아래를 확인해주세요.
@@ -23,7 +23,7 @@ const useCallback = (func, arr) => {
 `
 ).value;
 
-const string2 = marked(`
+const string2 = marked.parse(`
 useCallback은 useMemo와 달리 상태가 아니라 함수를 저장하기 위한 Hook입니다.    
 따라서 useCallback은 useMemo를 그대로 사용하되, useMemo의 첫번째 매개변수를 func을 반환하는 함수로 작성합니다.
 `);

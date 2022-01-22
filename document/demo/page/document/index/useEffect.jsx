@@ -5,7 +5,7 @@ hljs.registerLanguage("javascript", javascript);
 import classes from "../style";
 /** @jsx Boostact.createElement */
 
-const string1 = marked(`
+const string1 = marked.parse(`
 # useEffect
 
 useEffect는 컴포넌트가 생성될 때, 그리고 소멸할 때에 실행될 함수를 정의하는 데 이용됩니다.  
@@ -71,7 +71,7 @@ const useEffect = (fn, arr) => {
 `
 ).value;
 
-const string2 = marked(`
+const string2 = marked.parse(`
 useEffect의 코드는 useState에 비하면 매우 긴 편에 해당합니다. 그러니 에러 처리를 제외한 나머지를, 작은 단위로 잘라보겠습니다.
 `);
 
@@ -87,7 +87,7 @@ const useEffectHook = {
 `
 ).value;
 
-const string3 = marked(`
+const string3 = marked.parse(`
 useEffect도 useState와 같이 현재의 HOOK_ID를 미리 저장해둡니다. 이후 HOOK_ID에 대한 설명은 생략하겠습니다.   
 HOOK_ID가 어떻게 결정되는지가 궁금하신 분께서는, "주요 개념 2. HOOK 상태 관리"를 참고해주시기 바랍니다.   
    
@@ -135,7 +135,7 @@ if (HOOKS[CURRENT_HOOK_ID] && HOOKS[CURRENT_HOOK_ID].beforeArr.length) {
 `
 ).value;
 
-const string4 = marked(`
+const string4 = marked.parse(`
 주석은 useEffect가 실행될 때 어떤 흐름을 타는지를 보여줍니다. useEffect는 class의 생성, 소멸자와 유사하다고 볼 수 있습니다.
 `);
 

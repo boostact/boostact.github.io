@@ -5,7 +5,7 @@ hljs.registerLanguage("javascript", javascript);
 import classes from "../style";
 /** @jsx Boostact.createElement */
 
-const string1 = marked(`
+const string1 = marked.parse(`
 # useMemo
 
 useMemo는 useEffect와 비슷하지만 더 간단하고 편리한 함수입니다.   
@@ -45,7 +45,7 @@ const useMemo = (func, arr) => {
   `
 ).value;
 
-const string2 = marked(`
+const string2 = marked.parse(`
 여기서도 마찬가지로, 에러 처리를 제외하고 하나 씩 분석해보도록 하겠습니다.
 `);
 
@@ -80,7 +80,7 @@ const useMemo = (func, arr) => {
 `
 ).value;
 
-const string3 = marked(`
+const string3 = marked.parse(`
 이상으로 useMemo에 대한 분석이 끝났습니다.  
 useEffect처럼 함수를 호출해주는 것은 동일하지만, 메모이제이션이 적용되고 좀 더 간결해진 것을 알 수 있습니다.
 `);

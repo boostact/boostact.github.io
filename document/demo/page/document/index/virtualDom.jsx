@@ -5,7 +5,7 @@ hljs.registerLanguage("javascript", javascript);
 import classes from "../style";
 /** @jsx Boostact.createElement */
 
-const string1 = marked(`
+const string1 = marked.parse(`
 # 가상 DOM
 
 가상 DOM은 Boostact에 있어서 **가장 중요한 부분**입니다. 이 점은, Boostact가 React를 따라 만들었기 때문만은 아닙니다.  
@@ -21,7 +21,7 @@ Boostact에서 DOM은 총 3개로, 편의 상 **CurrentDOM과 wipDOM, realDOM**�
 
 `);
 
-const string2 = marked(`
+const string2 = marked.parse(`
 두 DOM이 있습니다. 하나는 currentDOM입니다. 앞서 말한 것과 같이, currentDOM은 렌더링된 페이지와 같은 구조로 되어 있습니다.  
 우측에 있는 DOM은 wip DOM입니다. wip는 다음에 렌더링될 모습을 의미합니다. 상태가 변한 것인지, 5번 Node가 지워진 것처럼 보입니다.    
 DOM이 렌더링될 때, Boostact에서는 두 DOM을 root 지점부터 비교하며 내려오게 됩니다. 따라서 비교가 계속 되면 5번 Node 지점에 도착했을 때 삭제가 되었다는 것을 파악하게 됩니다.   
@@ -64,7 +64,7 @@ const highlight1 = hljs.highlight(
   `
 ).value;
 
-const string3 = marked(`
+const string3 = marked.parse(`
 비교를 용이하게 하기 위해 Boostact에서는 먼저, 같은 타입인지를 파악합니다.   
 예컨대 두 노드가 여전히 'div' 태그를 가지고 있다면, 두 노드는 같은 타입인 것으로 간주합니다.    
 이 때, Boostact는 노드끼리를 비교한 결과를 4가지의 상태로 표현합니다. 바로 **PLACEMENT, DELETION, UPDATE, NONE**입니다.      
@@ -119,7 +119,7 @@ const reflectDOM = (node) => {
 `
 ).value;
 
-const string4 = marked(`
+const string4 = marked.parse(`
 이 함수에서의 switch문은 각 node의 effectTag를 확인합니다. 여기에는 앞서 말한 4가지의 상태가 있습니다.  
 각 node는 자신에게 붙은 상태에 따라 각기 다른 함수로 보내지며, 이후 DOM에는 해당하는 내용으로 나타나게 될 것입니다.
 
@@ -147,7 +147,7 @@ const highlight3 = hljs.highlight(
 `
 ).value;
 
-const string5 = marked(`
+const string5 = marked.parse(`
 여기까지 오셨다면 가상DOM에 상당한 부하가 걸리지 않는지 걱정이 될 수 있습니다. 하지만 Boostact에서는 다음과 같은 방법들로 부하를 줄이기 위해 노력하고 있습니다.   
     
 첫째, requestIdleCallback을 사용하여 브라우저가 실행중인 로직이 없는 경우에만 렌더링한다.    
