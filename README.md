@@ -1,7 +1,3 @@
----
-marp: true
----
-
 # How to Use?
 
 -   index.html에서 import하던 library version이 호환되지 않습니다.
